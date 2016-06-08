@@ -25,6 +25,7 @@ import com.example.iti.sidemenumodule.model.Category;
 import com.example.iti.sidemenumodule.model.Employee;
 import com.example.iti.sidemenumodule.model.Project;
 import com.example.iti.sidemenumodule.network_manager.AfterPraseResult;
+import com.norbsoft.typefacehelper.TypefaceHelper;
 
 import java.util.ArrayList;
 
@@ -51,6 +52,7 @@ public class PostProjectFragment extends Fragment implements AfterPraseResult{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
+        TypefaceHelper.typeface(myContext);
 
     }
 
@@ -76,7 +78,7 @@ public class PostProjectFragment extends Fragment implements AfterPraseResult{
                 FragmentManager manager=myContext.getSupportFragmentManager();
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment, secondPostProjectFragment, "secondPostProjectFragment");
-                transaction.addToBackStack("secondPostProjectFragment").commit();
+                transaction.commit();
             }
         });
         CategoryManger categoryManger = CategoryManger.getInstance(myContext);

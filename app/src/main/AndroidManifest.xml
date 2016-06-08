@@ -39,7 +39,7 @@
         </activity>
         <activity
             android:name=".controller.PostProjectMainActivity"
-            android:label="@string/title_activity_post_project_main"
+            android:label="@string/post_project_toolbar_title"
             android:parentActivityName=".controller.ActicityWithSideMenu" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

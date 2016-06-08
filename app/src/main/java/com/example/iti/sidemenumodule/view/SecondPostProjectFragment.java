@@ -140,7 +140,7 @@ public class SecondPostProjectFragment extends Fragment implements AfterPraseRes
                 SimpleDateFormat sdf1 = new SimpleDateFormat("MM-dd-yyyy");
                 String output = sdf1.format(c.getTime());
                 try {
-                    project.setProjectDeadLine(sdf1.parse(output));
+                    project.setStartDate(sdf1.parse(output));
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -148,6 +148,7 @@ public class SecondPostProjectFragment extends Fragment implements AfterPraseRes
                 st.concat(" " + moreEditText.getText().toString());
                 project.setProjectDescription(st);
                 project.setBudget(Integer.parseInt(bugetEditText.getText().toString()));
+                project.setUsers(1);
                 JobsManger jobsManger=JobsManger.getInstance(myContext);
                 jobsManger.postProject(project,SecondPostProjectFragment.this);
 
@@ -202,7 +203,7 @@ public class SecondPostProjectFragment extends Fragment implements AfterPraseRes
                 }
                 cursor.close();
                 Log.e("mytag",filePath);
-                project.setImageName(filePath);
+                project.setImageName(project.getProjectName());
                 encode_image.execute(filePath);
 
             }
