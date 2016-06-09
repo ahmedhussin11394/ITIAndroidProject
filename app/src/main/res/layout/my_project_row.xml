@@ -29,7 +29,7 @@
             android:text="Project1"
             android:id="@+id/my_project_name"
             android:layout_marginTop="3dp"
-            android:textColor="#040404"
+            android:textColor="@color/light_black"
             android:typeface="sans"
             android:textSize="17sp"
             android:textStyle="bold" />
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="5/5/2016"
             android:id="@+id/my_project_start_date"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="@color/light_black"
             android:typeface="sans"
             android:textSize="15sp"
             android:layout_marginTop="3dp" />
@@ -46,20 +46,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5/10/2016"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="@color/light_black"
             android:typeface="sans"
+
             android:textSize="15sp"
             android:id="@+id/my_project_end_date"
             android:layout_marginTop="3dp" />
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500.00 LE"
+                android:textColor="@color/light_black"
+                android:typeface="sans"
+                android:textSize="15sp"
+                android:id="@+id/my_project_price"
+                android:layout_marginTop="3dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="500.00 LE"
-            android:textColor="@color/cardview_dark_background"
+            android:text="@string/post_project_buget_coins"
+            android:textColor="@color/light_black"
             android:typeface="sans"
             android:textSize="15sp"
-            android:id="@+id/my_project_price"
             android:layout_marginTop="3dp" />
+            </LinearLayout>
         </LinearLayout>
 
     <RelativeLayout
@@ -74,8 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="in Progress"
-            android:textColor="@color/color_white"
-            android:background="@color/nliveo_green_alpha_colorPrimaryDark"
+            android:textColor="@color/light_green"
             android:typeface="sans"
             android:textSize="25sp"
             android:id="@+id/my_project_state"
